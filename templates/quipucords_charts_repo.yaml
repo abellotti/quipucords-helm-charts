@@ -1,0 +1,8 @@
+apiVersion: helm.openshift.io/v1beta1
+kind: HelmChartRepository
+metadata:
+  name: quipucords
+spec:
+  name: Quipucords Helm Charts
+  connectionConfig:
+    url: https://abellotti.github.io/quipucords-helm-repo/charts
