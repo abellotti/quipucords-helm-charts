@@ -8,8 +8,8 @@ all:	help
 update:
 	@echo "Updating the Discovery helm repo ..."
 	mkdir -p charts/discovery
-	helm package ../quipucords-deployer/discovery --destination ./charts
-	cp ../quipucords-deployer/discovery/icon.png ./charts/discovery/
+	helm package ../quipucords-helm-chart/discovery --destination ./charts
+	cp ../quipucords-helm-chart/discovery/icon.png ./charts/discovery/
 	helm repo index ./charts
 
 help:
@@ -17,5 +17,5 @@ help:
 	@echo ""
 	@echo "Make targets:"
 	@echo "  help              Shows this output."
-	@echo "  update            Package the charts from quipucords-deployer and update the index."
+	@echo "  update            Package the chart from quipucords-helm-chart and update the index."
 
